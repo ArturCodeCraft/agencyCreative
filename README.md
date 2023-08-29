@@ -1,4 +1,4 @@
-# ImaH - responsive Landing page
+# Agency Creative - responsive Landing page
 ## Link to a GitHub Pages: [Agency Creative](https://arturcodecraft.github.io/landing-agencyCreative/)
 ### Description:
 
