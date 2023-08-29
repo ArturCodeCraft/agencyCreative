@@ -1,5 +1,5 @@
 # Agency Creative - responsive Landing page
-## Link to a GitHub Pages: [Agency Creative](https://arturcodecraft.github.io/landing-agencyCreative/)
+## Link to a GitHub Pages: [Agency Creative](https://arturcodecraft.github.io/landing-agencycreative/)
 ### Description:
 
 - First developed using the "Desktop First" methodology, then "Mobile Devices".
