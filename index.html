@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--======================= favicon =======================-->
+	<link rel="shortcut icon" href="img/header-logo.svg" type="image/x-icon">
+
+	<!--======================= css =======================-->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--======================= name =======================-->
+	<title>Agency Creative</title>
+
+	<!--======================= brief informative description =======================-->
+	<meta name="description" content="
+		ArturCodeCraft is a web development studio.
+		I create beautiful and functional websites using modern technologies.
+		Ready for individual solutions for your business.">
+
+	<!--======================= author =======================-->
+	<meta name="author" content="ArturCodeCraft">
+</head>
+
+<body>
+	<div class="wrapper">
+		<!--======================= header =======================-->
+		<header class="header" id="header">
+			<div class="header__container">
+				<a href="#home" class="header__logo">
+					<img src="img/header-logo.svg" alt="logo">
+					<div class="header__logo-name">
+						<span>Agency</span>
+						<span>Creative</span>
+					</div>
+				</a>
+
+				<nav class="header__menu menu">
+					<div class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#home" class="menu__link _active-link">Home</a>
+							</li>
+
+							<li class="menu__item">
+								<a href="#adout" class="menu__link">about</a>
+							</li>
+
+							<li class="menu__item">
+								<a href="#services" class="menu__link">Sevices</a>
+							</li>
+
+							<li class="menu__item">
+								<a href="#projects" class="menu__link">Projects</a>
+							</li>
+						</ul>
+
+						<div class="menu__buttons">
+							<a href="#" class="menu__button _btn">
+								Contact us
+							</a>
+						</div>
+					</div>
+
+					<div class="menu__actions">
+						<!-- menu__change-theme -->
+						<button class="menu__change-theme change-theme" type="button" id="change-theme">
+							<div class="change-theme__sun">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
+									<path fill="#1c1c1e"
+										d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z"
+										clip-rule="evenodd" fill-rule="evenodd"></path>
+									<path fill="#1c1c1e"
+										d="M11 0H13V4.06189C12.6724 4.02104 12.3387 4 12 4C11.6613 4 11.3276 4.02104 11 4.06189V0ZM7.0943 5.68018L4.22173 2.80761L2.80752 4.22183L5.6801 7.09441C6.09071 6.56618 6.56608 6.0908 7.0943 5.68018ZM4.06189 11H0V13H4.06189C4.02104 12.6724 4 12.3387 4 12C4 11.6613 4.02104 11.3276 4.06189 11ZM5.6801 16.9056L2.80751 19.7782L4.22173 21.1924L7.0943 18.3198C6.56608 17.9092 6.09071 17.4338 5.6801 16.9056ZM11 19.9381V24H13V19.9381C12.6724 19.979 12.3387 20 12 20C11.6613 20 11.3276 19.979 11 19.9381ZM16.9056 18.3199L19.7781 21.1924L21.1923 19.7782L18.3198 16.9057C17.9092 17.4339 17.4338 17.9093 16.9056 18.3199ZM19.9381 13H24V11H19.9381C19.979 11.3276 20 11.6613 20 12C20 12.3387 19.979 12.6724 19.9381 13ZM18.3198 7.0943L21.1923 4.22183L19.7781 2.80762L16.9056 5.6801C17.4338 6.09071 17.9092 6.56608 18.3198 7.0943Z"
+										clip-rule="evenodd" fill-rule="evenodd"></path>
+								</svg>
+							</div>
+
+							<div class="change-theme__moon">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
+									<path fill="#f2f2f7"
+										d="M12.2256 2.00253C9.59172 1.94346 6.93894 2.9189 4.92893 4.92891C1.02369 8.83415 1.02369 15.1658 4.92893 19.071C8.83418 22.9763 15.1658 22.9763 19.0711 19.071C21.0811 17.061 22.0565 14.4082 21.9975 11.7743C21.9796 10.9772 21.8669 10.1818 21.6595 9.40643C21.0933 9.9488 20.5078 10.4276 19.9163 10.8425C18.5649 11.7906 17.1826 12.4053 15.9301 12.6837C14.0241 13.1072 12.7156 12.7156 12 12C11.2844 11.2844 10.8928 9.97588 11.3163 8.0699C11.5947 6.81738 12.2094 5.43511 13.1575 4.08368C13.5724 3.49221 14.0512 2.90664 14.5935 2.34046C13.8182 2.13305 13.0228 2.02041 12.2256 2.00253ZM17.6569 17.6568C18.9081 16.4056 19.6582 14.8431 19.9072 13.2186C16.3611 15.2643 12.638 15.4664 10.5858 13.4142C8.53361 11.362 8.73568 7.63895 10.7814 4.09281C9.1569 4.34184 7.59434 5.09193 6.34315 6.34313C3.21895 9.46732 3.21895 14.5326 6.34315 17.6568C9.46734 20.781 14.5327 20.781 17.6569 17.6568Z"
+										clip-rule="evenodd" fill-rule="evenodd"></path>
+								</svg>
+							</div>
+						</button>
+
+						<!-- menu__icon -->
+						<button class="menu__icon" type="button">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<!--======================= main =======================-->
+		<main class="page">
+			<!--======================= home =======================-->
+			<section class="page__main main" id="home">
+				<div class="main__container">
+					<div class="main__data">
+						<h1 class="main__title">
+							Make your dream
+							business goal come true
+						</h1>
+
+						<div class="main__text">
+							<p>
+								when you need us for improve your business,<br>
+								then come with us to help your business have reach it, you just sit and feel that goal
+							</p>
+						</div>
+
+						<div class="main__action">
+							<a href="#" class="main__button _btn-reverse">Start Project</a>
+						</div>
+
+						<div class="main__data-decor-ball"></div>
+
+						<div class="main__data-decor-ball"></div>
+					</div>
+
+					<div class="main__content">
+						<div data-slide-left class="main__image _ibg">
+							<img src="img/main.jpg" alt="main image">
+						</div>
+
+						<div data-slide-down class="main__content-1">
+							<div>
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M11.1033 3.81663C11.4701 3.07346 12.5299 3.07346 12.8967 3.81663L14.8576 7.78909C15.0031 8.08394 15.2843 8.2884 15.6096 8.33595L19.9962 8.97712C20.8161 9.09696 21.1429 10.1048 20.5493 10.683L17.3768 13.773C17.1409 14.0027 17.0333 14.3339 17.0889 14.6584L17.8374 19.0226C17.9775 19.8396 17.12 20.4626 16.3864 20.0767L12.4655 18.0148C12.1741 17.8615 11.8259 17.8615 11.5345 18.0148L7.61363 20.0767C6.88 20.4626 6.02245 19.8396 6.16257 19.0226L6.91109 14.6584C6.96675 14.3339 6.85908 14.0027 6.62321 13.773L3.45068 10.683C2.85708 10.1048 3.18387 9.09696 4.00378 8.97712L8.39037 8.33595C8.71572 8.2884 8.99691 8.08394 9.14245 7.78909L11.1033 3.81663Z"
+										fill="#F8BD38" />
+								</svg>
+								<p>Great Project</p>
+							</div>
+
+							<div>
+								<p>800+ <span>Done</span></p>
+							</div>
+						</div>
+
+						<div data-slide-up class="main__content-2">
+							<div>
+								<div class="main__content-2-image _ibg">
+									<img src="img/main-avatar.jpg" alt="main image">
+								</div>
+
+								<div class="main__content-2-data">
+									<p>Bill Adams</p>
+
+									<p>CEO UpTech</p>
+								</div>
+							</div>
+
+							<div>
+								<p>
+									“ This team is really the
+									best in its field,I don't
+									regret working with them,
+									and will come back again
+									thanks “
+								</p>
+							</div>
+						</div>
+
+						<div data-slide-right class="main__content-decor-ball _decor-ball-left"></div>
+
+						<div data-slide-left class="main__content-decor-ball _decor-ball-right"></div>
+					</div>
+				</div>
+			</section>
+
+			<!--======================= adout =======================-->
+			<section class="page__adout adout" id="adout">
+				<div class="adout__container">
+					<div class="adout__data">
+						<div data-slide-up class="adout__subtitle subtitle">
+							<p>About Us</p>
+						</div>
+
+						<h2 data-slide-up class="adout__title title">
+							Our Teammate
+						</h2>
+					</div>
+
+					<div class="adout__content">
+						<div data-slide-right class="adout__image _ibg">
+							<img src="img/about.jpg" alt="adout image">
+						</div>
+
+						<div class="adout__content-data">
+							<div class="adout__text">
+								<p data-slide-left>
+									We move with make a Creative Strategy for help your business
+									goal, we help to improve your income by a services we have.
+									make your content look interesting and make people look for
+									your business
+								</p>
+
+								<p data-slide-left>
+									We move with make a Creative Strategy for help your business
+									goal, we help to improve your income by a services we have.
+									make your content look interesting and make people look for
+									your businesss
+								</p>
+							</div>
+
+							<div data-slide-up class="adout__actions">
+								<a href="#" class="adout__button _btn-reverse">About Us</a>
+
+								<a href="#" class="adout__button _btn">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+											stroke="#377dff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M10 8L16 12L10 16V8Z" stroke="#377dff" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg>
+
+									<span>Our Story</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--======================= services =======================-->
+			<section class="page__services services" id="services">
+				<div class="services__container">
+					<div class="services__data">
+						<div data-slide-right class="services__subtitle subtitle">
+							<p>Our Services</p>
+						</div>
+
+						<h2 data-slide-right class="services__title title">
+							Perfect and Fast
+							Movement
+						</h2>
+
+						<div class="services__text">
+							<p data-slide-right>
+								We move with make a Creative Strategy for help your
+								business goal, we help to improve your income by a
+								services we have. make your content look interesting
+								and make people look for your business
+							</p>
+						</div>
+
+						<div data-slide-right class="services__action">
+							<a href="#" class="services__link">
+								<span>Read more</span>
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path d="M15 18L21 12L15 6" stroke="#377dff" stroke-width="2" stroke-linecap="round"
+										stroke-linejoin="round" />
+									<path d="M3 12H20" stroke="#377dff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M21 12H20" stroke="#377dff" stroke-width="2" stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</a>
+						</div>
+					</div>
+
+					<div class="services__content">
+						<article data-slide-left class="services__item">
+							<div class="services__image">
+								<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+									<path
+										d="M35 5.25H7C5.067 5.25 3.5 6.817 3.5 8.75V26.25C3.5 28.183 5.067 29.75 7 29.75H35C36.933 29.75 38.5 28.183 38.5 26.25V8.75C38.5 6.817 36.933 5.25 35 5.25Z"
+										stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M14 36.75H28" stroke="white" stroke-width="3" stroke-linecap="round"
+										stroke-linejoin="round" />
+									<path d="M21 29.75V36.75" stroke="white" stroke-width="3" stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</div>
+
+							<h4 class="services__item-title">
+								Social Media
+								Management
+							</h4>
+						</article>
+
+						<article data-slide-right class="services__item">
+							<div class="services__image">
+								<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+									<g clip-path="url(#clip0_1_126)">
+										<path
+											d="M21 26.25C23.8995 26.25 26.25 23.8995 26.25 21C26.25 18.1005 23.8995 15.75 21 15.75C18.1005 15.75 15.75 18.1005 15.75 21C15.75 23.8995 18.1005 26.25 21 26.25Z"
+											stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+										<path
+											d="M33.95 26.25C33.717 26.7778 33.6476 27.3633 33.7505 27.931C33.8534 28.4987 34.1241 29.0226 34.5275 29.435L34.6325 29.54C34.9579 29.8651 35.2161 30.2511 35.3922 30.676C35.5683 31.1009 35.659 31.5563 35.659 32.0163C35.659 32.4762 35.5683 32.9316 35.3922 33.3565C35.2161 33.7814 34.9579 34.1674 34.6325 34.4925C34.3074 34.8179 33.9214 35.0761 33.4965 35.2522C33.0716 35.4283 32.6162 35.519 32.1562 35.519C31.6963 35.519 31.2409 35.4283 30.816 35.2522C30.3911 35.0761 30.0051 34.8179 29.68 34.4925L29.575 34.3875C29.1626 33.9841 28.6387 33.7134 28.071 33.6105C27.5033 33.5076 26.9178 33.577 26.39 33.81C25.8724 34.0318 25.431 34.4002 25.12 34.8697C24.8091 35.3392 24.6422 35.8894 24.64 36.4525V36.75C24.64 37.6783 24.2713 38.5685 23.6149 39.2249C22.9585 39.8813 22.0683 40.25 21.14 40.25C20.2117 40.25 19.3215 39.8813 18.6651 39.2249C18.0087 38.5685 17.64 37.6783 17.64 36.75V36.5925C17.6265 36.0133 17.439 35.4515 17.1019 34.9802C16.7648 34.509 16.2938 34.15 15.75 33.95C15.2222 33.717 14.6367 33.6476 14.069 33.7505C13.5013 33.8534 12.9774 34.1241 12.565 34.5275L12.46 34.6325C12.1349 34.9579 11.7489 35.2161 11.324 35.3922C10.8991 35.5683 10.4437 35.659 9.98375 35.659C9.5238 35.659 9.06835 35.5683 8.64346 35.3922C8.21857 35.2161 7.83256 34.9579 7.5075 34.6325C7.18208 34.3074 6.92393 33.9214 6.74779 33.4965C6.57166 33.0716 6.481 32.6162 6.481 32.1562C6.481 31.6963 6.57166 31.2409 6.74779 30.816C6.92393 30.3911 7.18208 30.0051 7.5075 29.68L7.6125 29.575C8.01594 29.1626 8.28657 28.6387 8.38951 28.071C8.49244 27.5033 8.42295 26.9178 8.19 26.39C7.96816 25.8724 7.59982 25.431 7.13031 25.12C6.66081 24.8091 6.11063 24.6422 5.5475 24.64H5.25C4.32174 24.64 3.4315 24.2713 2.77513 23.6149C2.11875 22.9585 1.75 22.0683 1.75 21.14C1.75 20.2117 2.11875 19.3215 2.77513 18.6651C3.4315 18.0087 4.32174 17.64 5.25 17.64H5.4075C5.98674 17.6265 6.54851 17.439 7.01977 17.1019C7.49104 16.7648 7.85 16.2938 8.05 15.75C8.28295 15.2222 8.35244 14.6367 8.24951 14.069C8.14657 13.5013 7.87594 12.9774 7.4725 12.565L7.3675 12.46C7.04208 12.1349 6.78393 11.7489 6.60779 11.324C6.43166 10.8991 6.341 10.4437 6.341 9.98375C6.341 9.5238 6.43166 9.06835 6.60779 8.64346C6.78393 8.21857 7.04208 7.83256 7.3675 7.5075C7.69256 7.18208 8.07857 6.92393 8.50346 6.74779C8.92835 6.57166 9.3838 6.481 9.84375 6.481C10.3037 6.481 10.7591 6.57166 11.184 6.74779C11.6089 6.92393 11.9949 7.18208 12.32 7.5075L12.425 7.6125C12.8374 8.01594 13.3613 8.28657 13.929 8.38951C14.4967 8.49244 15.0822 8.42295 15.61 8.19H15.75C16.2676 7.96816 16.709 7.59982 17.02 7.13031C17.3309 6.66081 17.4978 6.11063 17.5 5.5475V5.25C17.5 4.32174 17.8687 3.4315 18.5251 2.77513C19.1815 2.11875 20.0717 1.75 21 1.75C21.9283 1.75 22.8185 2.11875 23.4749 2.77513C24.1313 3.4315 24.5 4.32174 24.5 5.25V5.4075C24.5022 5.97063 24.6691 6.52081 24.98 6.99031C25.291 7.45982 25.7324 7.82816 26.25 8.05C26.7778 8.28295 27.3633 8.35244 27.931 8.24951C28.4987 8.14657 29.0226 7.87594 29.435 7.4725L29.54 7.3675C29.8651 7.04208 30.2511 6.78393 30.676 6.60779C31.1009 6.43166 31.5563 6.341 32.0163 6.341C32.4762 6.341 32.9316 6.43166 33.3565 6.60779C33.7814 6.78393 34.1674 7.04208 34.4925 7.3675C34.8179 7.69256 35.0761 8.07857 35.2522 8.50346C35.4283 8.92835 35.519 9.3838 35.519 9.84375C35.519 10.3037 35.4283 10.7591 35.2522 11.184C35.0761 11.6089 34.8179 11.9949 34.4925 12.32L34.3875 12.425C33.9841 12.8374 33.7134 13.3613 33.6105 13.929C33.5076 14.4967 33.577 15.0822 33.81 15.61V15.75C34.0318 16.2676 34.4002 16.709 34.8697 17.02C35.3392 17.3309 35.8894 17.4978 36.4525 17.5H36.75C37.6783 17.5 38.5685 17.8687 39.2249 18.5251C39.8813 19.1815 40.25 20.0717 40.25 21C40.25 21.9283 39.8813 22.8185 39.2249 23.4749C38.5685 24.1313 37.6783 24.5 36.75 24.5H36.5925C36.0294 24.5022 35.4792 24.6691 35.0097 24.98C34.5402 25.291 34.1718 25.7324 33.95 26.25V26.25Z"
+											stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+									</g>
+									<defs>
+										<clipPath id="clip0_1_126">
+											<rect width="42" height="42" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+
+							<h4 class="services__item-title">
+								Search Engine
+								Opimization
+							</h4>
+						</article>
+
+						<article data-slide-left class="services__item">
+							<div class="services__image">
+								<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+									<path d="M21 33.25L33.25 21L38.5 26.25L26.25 38.5L21 33.25Z" stroke="white" stroke-width="3"
+										stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M31.5 22.75L28.875 9.625L3.5 3.5L9.625 28.875L22.75 31.5L31.5 22.75Z" stroke="white"
+										stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M3.5 3.5L16.7755 16.7755" stroke="white" stroke-width="3" stroke-linecap="round"
+										stroke-linejoin="round" />
+									<path
+										d="M19.25 22.75C21.183 22.75 22.75 21.183 22.75 19.25C22.75 17.317 21.183 15.75 19.25 15.75C17.317 15.75 15.75 17.317 15.75 19.25C15.75 21.183 17.317 22.75 19.25 22.75Z"
+										stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+
+							<h4 class="services__item-title">
+								Design
+							</h4>
+						</article>
+
+						<article data-slide-right class="services__item">
+							<div class="services__image">
+								<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+									<path
+										d="M35 12.25H7C5.067 12.25 3.5 13.817 3.5 15.75V35C3.5 36.933 5.067 38.5 7 38.5H35C36.933 38.5 38.5 36.933 38.5 35V15.75C38.5 13.817 36.933 12.25 35 12.25Z"
+										stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M29.75 3.5L21 12.25L12.25 3.5" stroke="white" stroke-width="3" stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</div>
+
+							<h4 class="services__item-title">
+								Ads
+							</h4>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!--======================= projects =======================-->
+			<section class="page__projects projects" id="projects">
+				<div class="projects__container">
+					<div class="projects__data">
+						<div data-slide-up class="projects__subtitle subtitle">
+							<p>Our Portfolio</p>
+						</div>
+
+						<h2 data-slide-up class="projects__title title">
+							What do we do
+						</h2>
+
+						<div class="projects__text">
+							<p data-slide-up>
+								all projects that we have already done , proven can help to use more
+								comfortable, then can used by client from our business
+							</p>
+						</div>
+					</div>
+
+					<div class="projects__content">
+						<div class="projects__items">
+							<article data-slide-right class="projects__item">
+								<div class="projects__image _ibg">
+									<img src="img/projects-1.jpg" alt="projects image">
+								</div>
+
+								<h4 class="projects__item-title">
+									Design Byte App
+								</h4>
+							</article>
+
+							<article data-slide-left class="projects__item">
+								<div class="projects__image _ibg">
+									<img src="img/projects-2.jpg" alt="projects image">
+								</div>
+
+								<h4 class="projects__item-title">
+									Cloud App
+								</h4>
+							</article>
+
+							<article data-slide-right class="projects__item">
+								<div class="projects__image _ibg">
+									<img src="img/projects-3.jpg" alt="projects image">
+								</div>
+
+								<h4 class="projects__item-title">
+									Design Furniture App
+								</h4>
+							</article>
+						</div>
+
+						<div data-slide-up class="projects__action">
+							<a href="#" class="projects__button _btn">
+								See All Portfolio
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--======================= testimonial =======================-->
+			<section class="page__testimonial testimonial">
+				<div class="testimonial__container">
+					<div class="testimonial__data">
+						<div data-slide-up class="testimonial__subtitle subtitle">
+							<p>Testimonial</p>
+						</div>
+
+						<h2 data-slide-up class="testimonial__title title">
+							People Talk about us
+						</h2>
+					</div>
+
+					<div class="testimonial__content">
+						<article data-slide-right class="testimonial__item">
+							<div class="testimonial__item-profile">
+								<div class="testimonial__item-image">
+									<img src="img/testimonial.jpg" alt="testimonial image">
+								</div>
+
+								<div class="testimonial__item-data">
+									<a href="#" class="testimonial__item-name">
+										Angel Rose
+									</a>
+
+									<a href="#" class="testimonial__item-degree">
+										<p>Creative Manager</p>
+									</a>
+								</div>
+							</div>
+
+							<div class="testimonial__item-text">
+								<p>
+									There are many variations
+									passages of Lorem Ipsum majority
+									some by words which don't look .
+								</p>
+							</div>
+						</article>
+
+						<article data-slide-left class="testimonial__item">
+							<div class="testimonial__item-profile">
+								<div class="testimonial__item-image">
+									<img src="img/testimonial.jpg" alt="testimonial image">
+								</div>
+
+								<div class="testimonial__item-data">
+									<a href="#" class="testimonial__item-name">
+										Angel Rose
+									</a>
+
+									<a href="#" class="testimonial__item-degree">
+										<p>Creative Manager</p>
+									</a>
+								</div>
+							</div>
+
+							<div class="testimonial__item-text">
+								<p>
+									There are many variations
+									passages of Lorem Ipsum majority
+									some by words which don't look .
+								</p>
+							</div>
+						</article>
+
+						<article data-slide-right class="testimonial__item">
+							<div class="testimonial__item-profile">
+								<div class="testimonial__item-image">
+									<img src="img/testimonial.jpg" alt="testimonial image">
+								</div>
+
+								<div class="testimonial__item-data">
+									<a href="#" class="testimonial__item-name">
+										Angel Rose
+									</a>
+
+									<a href="#" class="testimonial__item-degree">
+										<p>Creative Manager</p>
+									</a>
+								</div>
+							</div>
+
+							<div class="testimonial__item-text">
+								<p>
+									There are many variations
+									passages of Lorem Ipsum majority
+									some by words which don't look .
+								</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!--======================= interesting =======================-->
+			<section class="page__interesting interesting">
+				<div class="interesting__container">
+					<div class="interesting__data">
+						<h2 data-slide-right class="interesting__title title">
+							Interesting
+							Collaboration
+							With Us?
+						</h2>
+
+						<div class="interesting__text">
+							<p data-slide-right>
+								Help you to reach your business goal
+							</p>
+						</div>
+
+						<div data-slide-right class="interesting__action">
+							<a href="#" class="interesting__button _btn-reverse">
+								Get Started
+							</a>
+						</div>
+					</div>
+
+					<div class="interesting__content">
+						<div data-slide-up class="interesting__image-left">
+							<img src="img/interesting-1.jpg" alt="interesting image">
+						</div>
+
+						<div data-slide-down class="interesting__image-right">
+							<img src="img/interesting-2.jpg" alt="interesting image">
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!--======================= footer =======================-->
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content">
+					<a href="#home" class="footer__logo">
+						<img src="img/header-logo.svg" alt="logo">
+						<div class="footer__logo-name">
+							<span>Agency</span>
+							<span>Creative</span>
+						</div>
+					</a>
+
+					<div class="footer__data">
+						<div class="footer__menu">
+							<h4 class="footer__title">
+								Terms & policies
+							</h4>
+
+							<ul class="footer__links">
+								<li class="footer__item">
+									<a href="#" class="footer__link">Terms of Service</a>
+								</li>
+
+								<li class="footer__item">
+									<a href="#" class="footer__link">Privacy Policy</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="footer__menu">
+							<h4 class="footer__title">
+								Company
+							</h4>
+
+							<ul class="footer__links">
+								<li class="footer__item">
+									<a href="#home" class="footer__link">Home</a>
+								</li>
+
+								<li class="footer__item">
+									<a href="#adout" class="footer__link">About Us</a>
+								</li>
+
+								<li class="footer__item">
+									<a href="#" class="footer__link">Contact Us</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="footer__menu">
+							<h4 class="footer__title">
+								Contact
+							</h4>
+
+							<ul class="footer__links">
+								<li class="footer__item">
+									<a href="tel:(+62) 893912392190" target="_blank" class="footer__link">(+62) 893912392190</a>
+								</li>
+
+								<li class="footer__item">
+									<a href="mailto:agecnycr@gmail.com" target="_blank" class="footer__link">agecnycr@gmail.com</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="footer__menu">
+							<h4 class="footer__title">
+								Location
+							</h4>
+
+							<ul class="footer__links">
+								<li class="footer__item">
+									<a href="#" target="_blank" class="footer__link">PT Osiris Real Estate Internasional</a>
+								</li>
+
+								<li class="footer__item">
+									<a href="https://goo.gl/maps/De4eiMZCc8RdPwx37" target="_blank" class="footer__link">Jl. KH. Wahid
+										Hasyim Kel No.10D</a>
+								</li>
+
+								<li class="footer__item">
+									<a href="https://goo.gl/maps/yfxCwifXRHw42HkcA" target="_blank" class="footer__link">Jakarta,
+										Indonesia</a>
+								</li>
+
+								<li class="footer__item">
+									<a href="mailto:team@OsirisRealEstate.com" target="_blank"
+										class="footer__link">team@OsirisRealEstate.com</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer__social">
+					<ul class="footer__social-items">
+						<li class="footer__social-item">
+							<a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path
+										d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
+										stroke="#383638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</a>
+						</li>
+
+						<li class="footer__social-item">
+							<a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+									<path
+										d="M17 2.02539H7C4.23858 2.02539 2 4.26397 2 7.02539V17.0254C2 19.7868 4.23858 22.0254 7 22.0254H17C19.7614 22.0254 22 19.7868 22 17.0254V7.02539C22 4.26397 19.7614 2.02539 17 2.02539Z"
+										stroke="#383638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path
+										d="M16 11.3954C16.1234 12.2277 15.9812 13.0777 15.5937 13.8245C15.2062 14.5713 14.5931 15.1769 13.8416 15.5551C13.0901 15.9334 12.2384 16.065 11.4077 15.9314C10.5771 15.7977 9.80971 15.4055 9.21479 14.8106C8.61987 14.2157 8.22768 13.4483 8.09402 12.6177C7.96035 11.787 8.09202 10.9353 8.47028 10.1838C8.84854 9.4323 9.45414 8.81919 10.2009 8.43169C10.9477 8.04419 11.7977 7.90204 12.63 8.02545C13.4789 8.15133 14.2648 8.54691 14.8716 9.15375C15.4785 9.7606 15.8741 10.5465 16 11.3954Z"
+										stroke="#383638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M17.5 6.52539H17.51" stroke="#383638" stroke-width="2" stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</a>
+						</li>
+
+						<li class="footer__social-item">
+							<a href="https://www.linkedin.com/" target="_blank" class="footer__social-link">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+									<path
+										d="M16 8.02539C17.5913 8.02539 19.1174 8.65753 20.2426 9.78275C21.3679 10.908 22 12.4341 22 14.0254V21.0254H18V14.0254C18 13.495 17.7893 12.9863 17.4142 12.6112C17.0391 12.2361 16.5304 12.0254 16 12.0254C15.4696 12.0254 14.9609 12.2361 14.5858 12.6112C14.2107 12.9863 14 13.495 14 14.0254V21.0254H10V14.0254C10 12.4341 10.6321 10.908 11.7574 9.78275C12.8826 8.65753 14.4087 8.02539 16 8.02539V8.02539Z"
+										stroke="#383638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M6 9.02539H2V21.0254H6V9.02539Z" stroke="#383638" stroke-width="2" stroke-linecap="round"
+										stroke-linejoin="round" />
+									<path
+										d="M4 6.02539C5.10457 6.02539 6 5.12996 6 4.02539C6 2.92082 5.10457 2.02539 4 2.02539C2.89543 2.02539 2 2.92082 2 4.02539C2 5.12996 2.89543 6.02539 4 6.02539Z"
+										stroke="#383638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</a>
+						</li>
+
+						<li class="footer__social-item">
+							<a href="https://mail.google.com/" target="_blank" class="footer__social-link">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+									<path
+										d="M4 4.02539H20C21.1 4.02539 22 4.92539 22 6.02539V18.0254C22 19.1254 21.1 20.0254 20 20.0254H4C2.9 20.0254 2 19.1254 2 18.0254V6.02539C2 4.92539 2.9 4.02539 4 4.02539Z"
+										stroke="#383638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M22 6.02539L12 13.0254L2 6.02539" stroke="#383638" stroke-width="2" stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</a>
+						</li>
+
+						<li class="footer__social-item">
+							<a href="https://twitter.com/" target="_blank" class="footer__social-link">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+									<path
+										d="M23 3.02544C22.0424 3.70091 20.9821 4.21755 19.86 4.55544C19.2577 3.86295 18.4573 3.37213 17.567 3.14936C16.6767 2.9266 15.7395 2.98263 14.8821 3.30989C14.0247 3.63715 13.2884 4.21984 12.773 4.97915C12.2575 5.73847 11.9877 6.63777 12 7.55544V8.55544C10.2426 8.601 8.50127 8.21125 6.93101 7.42088C5.36074 6.63052 4.01032 5.46407 3 4.02544C3 4.02544 -1 13.0254 8 17.0254C5.94053 18.4234 3.48716 19.1244 1 19.0254C10 24.0254 21 19.0254 21 7.52544C20.9991 7.24689 20.9723 6.96903 20.92 6.69544C21.9406 5.68893 22.6608 4.41815 23 3.02544V3.02544Z"
+										stroke="#383638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</a>
+						</li>
+					</ul>
+
+					<div class="footer__copy">
+						<p>Copyright @ 2022 Agency Creative. All Right Reserved</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<!--======================= scroll-up =======================-->
+	<a href="#" class="scroll-up" id="scroll-up">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path fill="none" d="M0 0h24v24H0z"></path>
+			<path
+				d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z"
+				fill="rgba(255, 255, 255, 1)">
+			</path>
+		</svg>
+	</a>
+
+	<!--======================= js =======================-->
+	<!-- script.js -->
+	<script src="js/script.js"></script>
+</body>
+
+</html>
+
+
+<!-- end -->
